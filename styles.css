@@ -1,0 +1,25 @@
+.cursive {
+  font-family: 'Dancing Script';
+  font-size: 1.25em;
+}
+
+.letter {
+  max-width: 660px;
+  padding: 1em;
+  background-color: pink;
+}
+
+.body {
+  font-size: 1.125em;
+}
+
+.writer {
+  white-space: pre;
+  margin-top: .5em;
+  font-family: 'Dancing Script'
+}
+
+.writer:before {
+  content: "Love always,\A";
+  font
+}
