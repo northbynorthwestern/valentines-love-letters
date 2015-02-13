@@ -1,16 +1,102 @@
+div.wrapper {
+  font-family: 'Proxima Nova';
+  width: 900px;
+  /*background-color: peachpuff;*/
+}
+
+div.clearfix {
+  float: none;
+  clear: both;
+}
+
+div.back,
+div.forward,
+div.letter-wrapper {
+  float: left;
+}
+
+div.back,
+div.forward {
+  /*width: 15%;*/
+  max-width: 15%;
+}
+
+div.back p,
+div.forward p {
+  top: 30%;
+  position: relative;
+  margin: 0;
+  font-weight: 700;
+}
+
+div.back p span,
+div.forward p span {
+  border-radius: 1em;
+  /*background-color: pink;*/
+  padding: .5em 1em;
+}
+
+
+div.back p:hover span,
+div.forward p:hover span {
+  background-color: rgb(214, 183, 232);
+}
+
+
+div.forward {
+  text-align: left;
+  padding-left: 1em;
+}
+
+div.back {
+  text-align: right;
+  padding-right: 1em;
+}
+
+div.letter-wrapper {
+  width: 70%;
+}
+
 .cursive {
   font-family: 'Dancing Script';
   font-size: 1.25em;
 }
 
 .letter {
-  max-width: 660px;
-  padding: 1em;
-  background-color: pink;
+  display: none;
+  max-width: 100%;
+  border-radius: 1em;
+  position: relative;
+  padding: 1em 2em;
+  overflow: hidden;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.letter:nth-of-type(odd) {
+  background-color: rgba(232, 133, 135, .5);
+}
+
+.letter:nth-of-type(even) {
+  background-color: rgba(214, 183, 232, .5);
+}
+
+.letter.active {
+  display: block;
+}
+
+.letter div {
+  width: 100%;
+}
+
+.letter .body,
+.letter .writer,
+.letter .cursive {
+  z-index: 5;
 }
 
 .body {
-  font-size: 1.125em;
+  font-size: 1em;
 }
 
 .writer {
@@ -22,4 +108,50 @@
 .writer:before {
   content: "Love always,\A";
   font
+}
+
+
+.heart {
+    position: absolute;
+    width: 100px !important;
+    height: 90px;
+    z-index: 0;
+    opacity: .4;
+    bottom: 10px;
+    right: 50px;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg) scale(2,2);
+       -moz-transform: rotate(-45deg) scale(2,2);
+        -ms-transform: rotate(-45deg) scale(2,2);
+         -o-transform: rotate(-45deg) scale(2,2);
+            transform: rotate(-45deg) scale(2,2);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg) scale(2,2);
+       -moz-transform: rotate(45deg) scale(2,2);
+        -ms-transform: rotate(45deg) scale(2,2);
+         -o-transform: rotate(45deg) scale(2,2);
+            transform: rotate(45deg) scale(2,2);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
 }
