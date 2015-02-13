@@ -1,7 +1,11 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
 div.wrapper {
   font-family: 'Proxima Nova';
   width: 900px;
-  /*background-color: peachpuff;*/
 }
 
 div.clearfix {
@@ -17,8 +21,7 @@ div.letter-wrapper {
 
 div.back,
 div.forward {
-  /*width: 15%;*/
-  max-width: 15%;
+  width: 15%;
 }
 
 div.back p,
@@ -27,13 +30,16 @@ div.forward p {
   position: relative;
   margin: 0;
   font-weight: 700;
+  cursor: pointer;
 }
 
 div.back p span,
 div.forward p span {
+  position: relative;
   border-radius: 1em;
-  /*background-color: pink;*/
   padding: .5em 1em;
+  margin-left: .5em;
+  margin-right: .5em;
 }
 
 
@@ -42,19 +48,18 @@ div.forward p:hover span {
   background-color: rgb(214, 183, 232);
 }
 
-
 div.forward {
   text-align: left;
-  padding-left: 1em;
 }
 
 div.back {
   text-align: right;
-  padding-right: 1em;
 }
 
 div.letter-wrapper {
-  width: 70%;
+  max-width: 630px;
+  width: 630px;
+  /*padding: 1em;*/
 }
 
 .cursive {
